@@ -13,7 +13,7 @@ print(max(numbers))
 
 #cau2
 numbers = [20, 10, -4, 5, 15, 36, -16]
-
+#tạo list mới không chứa số lớn nhất
 max1 = max(numbers)
 n = numbers.copy()
 while max1 in n:
