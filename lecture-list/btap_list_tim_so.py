@@ -17,5 +17,6 @@ numbers.remove(max(numbers))
 print(max(numbers))
 
 #cau 3
-numbers = [20, 36, 10, -4, 5, 15, 36, -16, 36]
-print(numbers.count(max(numbers)))
+# numbers = [20, 36, 10, -4, 5, 15, 36, -16, 36]
+# print(numbers.count(max(numbers)))
+#hiểu sai đề ròi để sửa lại
