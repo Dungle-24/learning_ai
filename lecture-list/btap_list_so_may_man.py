@@ -41,22 +41,6 @@ so_may_man(int(n))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # number = 23
 # def is_happy_number(number):
 #     seen = []
