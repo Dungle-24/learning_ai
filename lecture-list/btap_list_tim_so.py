@@ -27,6 +27,14 @@ else:
 
 
 #cau 3
-# numbers = [20, 36, 10, -4, 5, 15, 36, -16, 36]
-# print(numbers.count(max(numbers)))
-#hiểu sai đề ròi để sửa lại
+#cau 3
+numbers = [20, 20, 10, -4, 5, 15, 36, -16]
+
+def tim_k_max (numbers, k):
+    new = numbers.copy()
+    for _ in range(k):
+        i = max(new)
+        print(i)
+        while i in new:
+            new.remove(i)
+tim_k_max(numbers, 3)
