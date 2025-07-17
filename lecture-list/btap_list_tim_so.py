@@ -13,8 +13,9 @@ print(max(numbers))
 
 #cau2
 numbers = [20, 10, -4, 5, 15, 36, -16]
-numbers.remove(max(numbers))
-print(max(numbers))
+n = list(set(numbers))  
+n.sort(reverse=True)
+print("Số lớn thứ nhì:", n[1])
 
 #cau 3
 # numbers = [20, 36, 10, -4, 5, 15, 36, -16, 36]
