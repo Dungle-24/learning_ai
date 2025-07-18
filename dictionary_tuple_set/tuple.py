@@ -65,7 +65,7 @@ for ten, diem_list in students_scores:
 
 print(diem_tb)
 
-print("\nHọc sinh có điểm >= 5:")
+print("Học sinh có điểm >= 5:")
 for ten, tb in diem_tb.items():
     if tb >= 5:
         print(f"{ten}: {tb}")
