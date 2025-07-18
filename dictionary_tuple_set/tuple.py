@@ -25,7 +25,27 @@ data = ("red", "green", "blue", "red")
 print(data.count("red"))   
 print(data.count("black")) 
 
+#đếm số lần xuất hiện
+data = ("red", "green", "blue", "red")
+print(data.count("red"))
+print(data.count("black"))
 
+#vị trí của phần tử đầu
+x = 2, 3, 4, 7, 3, 6, 2, 6, 8
+print(x.index(3))
+
+#tìm số lớn nhất
+x = 2, 3, 4, 7, 3, 6, 2, 6, 8
+print(max(x))
+
+#sắp xếp
+x = 2, 3, 4, 7, 3, 6, 2, 6, 8
+print(sorted(x))
+print(sorted(x, reverse = True))
+
+#đếm số lần xuất hiện
+x = 2, 3, 4, 7, 3, 6, 2, 6, 8
+print(x.count(3))
 """
 Cho một danh sách gồm nhiều tuple, mỗi tuple chứa tên học sinh và điểm của học sinh đó.
 
