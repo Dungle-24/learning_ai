@@ -22,11 +22,6 @@ print(data)
 
 #đếm số lần xuất hiện
 data = ("red", "green", "blue", "red")
-print(data.count("red"))   
-print(data.count("black")) 
-
-#đếm số lần xuất hiện
-data = ("red", "green", "blue", "red")
 print(data.count("red"))
 print(data.count("black"))
 
