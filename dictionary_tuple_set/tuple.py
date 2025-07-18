@@ -19,3 +19,8 @@ print(data) # ('red', 'green', ['dark', 'blue'], 'yellow', 'black')
 #nối
 data = (2, 4, 6) + (1, 2, 3)
 print(data)
+
+#đếm số lần xuất hiện
+data = ("red", "green", "blue", "red")
+print(data.count("red"))   
+print(data.count("black")) 
