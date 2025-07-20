@@ -19,11 +19,11 @@ print(s1[::-1])
 
 #1 số hàm xử li
 s = "  Hello Python  "
-print(len(s))           # 16
-print(s.lower())        # "  hello python  "
-print(s.upper())        # "  HELLO PYTHON  "
-print(s.strip())        # "Hello Python"
-print(s.replace("Python", "World"))  # "  Hello World  "
+print(len(s))          
+print(s.lower())   #hello python 
+print(s.upper())   # HELLO PYTHON 
+print(s.strip())     # Hello Python
+print(s.replace("Python", "World"))  Hello World 
 
 # Kiểm tra chuỗi con
 print("Hell" in s)      # True
@@ -36,9 +36,17 @@ for ch in s1:
 # Tách, nối chuỗi
 text = "red,green,blue"
 colors = text.split(",")
-print(colors)           # ['red', 'green', 'blue']
-print(" - ".join(colors))  # red - green - blue
+print(colors)         
+print(" - ".join(colors))  
 
 # Chuyển kiểu khác sang chuỗi
 x = 123
-print(str(x))           # "123"
+print(str(x))
+
+# Ký tự thoát
+s4 = "Hello\nWorld\t\"Python\"\\Example"
+print("Ký tự thoát:", s4)
+
+# Chuỗi bất biến
+new_s1 = 'H' + s1[1:]
+print("Chuỗi mới:", new_s1)  
