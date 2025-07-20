@@ -25,25 +25,28 @@ print(s.upper())   # HELLO PYTHON
 print(s.strip())     # Hello Python
 print(s.replace("Python", "World"))  Hello World 
 
-# Kiểm tra chuỗi con
-print("Hell" in s)      # True
-print("Java" not in s)  # True
+#kiểm tra chuỗi con
+print("Hell" in s)     
+print("Java" not in s) 
+#tìm chuỗi con
+print(s.find("Python")) 
+print(s.find("Java"))    
 
 # Duyệt chuỗi
 for ch in s1:
     print(ch)
 
-# Tách, nối chuỗi
+# tách, nối chuỗi
 text = "red,green,blue"
 colors = text.split(",")
 print(colors)         
 print(" - ".join(colors))  
 
-# Chuyển kiểu khác sang chuỗi
+# chuyển kiểu khác sang chuỗi
 x = 123
 print(str(x))
 
-# Ký tự thoát
+# ký tự thoát
 s4 = "Hello\nWorld\t\"Python\"\\Example"
 print("Ký tự thoát:", s4)
 
