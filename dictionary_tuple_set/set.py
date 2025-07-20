@@ -47,4 +47,20 @@ d = {1, 3, 4, 6, "red", True}
 for i in d:
     print(i)
 
+#phép hợp
+set1 = {2, 4, 5, 6, 7}
+set2 = {"vàng", "red", "green", 2, 4}
+print(set1 | set2) #cách 1
+print(set1.union(set2)) #cáh 2
 
+#giao
+set1 = {2, 4, 5, 6, 7}
+set2 = {"vàng", "red", "green", 2, 4}
+print(set1 & set2)
+print(set1.intersection(set2))
+
+#phép hiệu
+set1 = {2, 4, 5, 6, 7}
+set2 = {"vàng", "red", "green", 2, 4}
+print(set1 - set2)
+print(set2.difference(set1))
