@@ -64,3 +64,9 @@ set1 = {2, 4, 5, 6, 7}
 set2 = {"vàng", "red", "green", 2, 4}
 print(set1 - set2)
 print(set2.difference(set1))
+
+#phép hiệu đối xứng, bỏ những cái thuộc cả 2 tập
+set1 = {2, 4, 5, 6, 7}
+set2 = {"vàng", "red", "green", 2, 4}
+print(set1 ^ set2)
+print(set1.symmetric_difference(set2))
