@@ -1,4 +1,3 @@
-
 # khai báo chuỗi
 s1 = "hello"
 s2 = 'world'
@@ -16,7 +15,7 @@ print(s1[-1])
 # cắt chuỗi
 s1 = "hello"
 print(s1[1:4])
-print(s1[:3])   
+print(s1[:3])
 print(s1[2:])
 
 # đảo
@@ -35,22 +34,22 @@ s = "  Hello Python  "
 print(len(s))           # 16
 print(s.lower())        # "  hello python  "
 print(s.upper())        # "  HELLO PYTHON  "
-print(s.strip())        # "Hello Python"    #loại bỏ khoảng trắng dư thừa. lstrip là xóa bên trái, rstrip là xóa bên phải
+print(s.strip())        # "Hello Python"
 s = "Hello Python  "
-print(s.capitalize()) #viết hoa kí tự đầu, còn lại viết thường
+print(s.capitalize())
 s = "  Hello Python  "
-print(s.replace("Python", "World"))  # "  Hello World  " thay thế
+print(s.replace("Python", "World"))
 
 # Kiểm tra chuỗi con
 s = "  Hello Python  "
-print("Hell" in s)      # True
+print("Hell" in s)
 print("Java" not in s)
 
 # Duyệt chuỗi
 for ch in s1:
     print(ch)
 
-# Tách chuỗi, nối chỉ ra muốn tách nối bằng cái gì
+# Tách chuỗi
 text = "red,green,blue"
 text1 = '''
 The sun dipped below the horizon, painting the sky in fiery hues of orange and purple. A gentle breeze rustled through
@@ -59,34 +58,33 @@ as the last rays of light faded, marking the peaceful end of another day. It was
 pause before the stars began to pepper the darkening canvas above.
 '''
 colors = text.split(".")
-print(colors)           # ['red', 'green', 'blue']
-print(" - ".join(colors))  # red - green - blue
+print(colors)
+print(" - ".join(colors))
 
 # Chuyển kiểu khác sang chuỗi
 x = 123
-print(str(x))           # "123"
+print(str(x))
 
 # Tìm kiếm chuỗi con
 s = "Hello Python  "
-print(s.find("Python"))  # 6
-print(s.find("Java"))    # -1
+print(s.find("Python"))
+print(s.find("Java"))
 
-#định dạng string
+# Định dạng string
 ten = 'dung'
 string = "ho va ten: {}".format(ten)
 print(string)
 string = 'toi ten la {1}, toi {0} tuoi, toi dang di du lich o {2}'.format('dung', 20, 'dat lat')
 print(string)
 
-
-#đếm ký tự trong string không phân biệt hoa thường
+# Đếm ký tự trong string không phân biệt hoa thường
 text = '''
 The sun dipped below the horizon, painting the sky in fiery hues of orange and purple. A gentle breeze rustled through
 the palm trees, carrying the faint scent of salt from the nearby ocean. On the beach, a few lingering figures watched 
 as the last rays of light faded, marking the peaceful end of another day. It was a moment of quiet reflection, a serene 
 pause before the stars began to pepper the darkening canvas above.
 '''
-def dem_ky_tu (string):
+def dem_ky_tu(string):
     dem = {}
     for key in string.lower():
         if key in dem.keys():
@@ -94,48 +92,30 @@ def dem_ky_tu (string):
         else:
             dem[key] = 1
     print(dem)
+
 dem_ky_tu(text)
 
-
-"""
-    Viết hàm nhận 1 tham số đầu vào là 1 số tự nhiên n
-    In ra kết quả là tích các thừa số nguyên tố của số đó
-    Ví dụ, với n = 100
-    Kết quả in ra màn hình là:
-        100 = 2 x 2 x 5 x 5
-"""
-
+# Phân tích thừa số nguyên tố
 def get_string(n):
-    if n!= 1:
+    if n != 1:
         goc = n
         result = []
-        for i in range(2,n+1):
-            while n% i == 0:
-                n//=i
+        for i in range(2, n+1):
+            while n % i == 0:
+                n //= i
                 result.append(str(i))
-        print(goc,"="," x ".join(result))
+        print(goc, "=", " x ".join(result))
     else:
-        print(n,"= 1")
+        print(n, "= 1")
 get_string(100)
 
-"""
-    Viết 1 hàm nhận 2 tham số đầu vào:
-    1. 1 chuỗi ký tự bất kỳ
-    2. 1 số tự nhiên i bất kỳ
-    Loại bỏ phần tử thứ k khỏi chuỗi và trả về chuỗi kết quả
-"""
-
+# Loại bỏ ký tự tại vị trí k
 string = "Today is a beautiful day!"
-def remove_char (string, k):
+def remove_char(string, k):
     print(string[:k-1] + string[k:])
+remove_char(string, 5)
 
-remove_char(string,5)
-
-"""
-    Viết 1 hàm nhận tham số đầu vào là 1 chuỗi ký tự bất kỳ,
-    đếm và trả về số lượng nguyên âm trong chuỗi đó
-"""
-
+# Đếm nguyên âm
 text = "A A A Today is a beautiful day"
 def count_vowels(string):
     vowels = ['u', 'e', 'o', 'a', 'i']
@@ -144,56 +124,36 @@ def count_vowels(string):
         if i in vowels:
             count += 1
     print(count)
-
 count_vowels(text)
 
-"""
-    Yêu cầu người dùng nhập vào 2 chuỗi ký tự bất kỳ.
-    Kiểm tra xem chúng có phải anagrams (phép đảo chữ)
-    của nhau không?
-    Định nghĩa anagram: 2 từ là anagram của nhau nếu ta có thể
-    thu được từ này bằng cách đổi vị trí các ký tự của từ kia
-    Các ví dụ:
-    "New York Times" và "monkeys write"
-    "coronavirus" và "carnivorous"
-    "a gentleman" = "elegant man"
-    "silent" = "listen"
-"""
-
+# Anagram
 def are_anagrams(str1, str2):
     c1 = str1.replace(' ','').lower()
     c2 = str2.replace(' ','').lower()
     if sorted(c1) == sorted(c2):
-        print(str1,'la anagrams cua', str2)
+        print(str1, 'là anagrams của', str2)
     else:
-        print(str1,'khong la anagrams cua', str2)
+        print(str1, 'không là anagrams của', str2)
 
 s1 = 'New York Times'
 s2 = 'monkeys write'
 are_anagrams(s1, s2)
 
-"""
-    Viết 1 hàm nhận 2 tham số đầu vào là 2 chuỗi ký tự bất kỳ,
-    hàm trả về 1 danh sách bao gồm các ký tự xuất hiện ở cả
-    2 chuỗi
+# Các ký tự chung - cách 1
+def common_chars(str1, str2):
+    s = set()
+    str1 = str1.lower().replace(' ','')
+    str2 = str2.lower().replace(' ', '')
+    for i in str1:
+        if i in str2:
+            s.add(i)
+    print(s)
 
-"""
+s1 = 'New York Times'
+s2 = 'monkeys vai ca chuong'
+common_chars(s1, s2)
 
-# cách 1
-# def common_chars(str1, str2):
-#     s = set()
-#     str1 = str1.lower().replace(' ','')
-#     str2 = str2.lower().replace(' ', '')
-#     for i in str1:
-#         if i in str2:
-#             s.add(i)
-#     print(s)
-# 
-# s1 = 'New York Times'
-# s2 = 'monkeys vai ca chuong'
-# common_chars(s1,s2)
-
-# cách 2
+# Các ký tự chung - cách 2
 def common_chars(str1, str2):
     str1 = set(str1.lower().replace(' ', ''))
     str2 = set(str2.lower().replace(' ', ''))
@@ -201,5 +161,4 @@ def common_chars(str1, str2):
 
 s1 = 'New York Times'
 s2 = 'monkeys vai ca chuong'
-
 common_chars(s1, s2)
