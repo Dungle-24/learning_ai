@@ -117,3 +117,16 @@ def get_string(n):
     else:
         print(n,"= 1")
 get_string(100)
+
+"""
+    Viết 1 hàm nhận 2 tham số đầu vào:
+    1. 1 chuỗi ký tự bất kỳ
+    2. 1 số tự nhiên i bất kỳ
+    Loại bỏ phần tử thứ k khỏi chuỗi và trả về chuỗi kết quả
+"""
+
+string = "Today is a beautiful day!"
+def remove_char (string, k):
+    print(string[:k-1] + string[k:])
+
+remove_char(string,5)
