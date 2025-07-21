@@ -180,18 +180,18 @@ are_anagrams(s1, s2)
 """
 
 # cách 1
-def common_chars(str1, str2):
-    s = set()
-    str1 = str1.lower().replace(' ','')
-    str2 = str2.lower().replace(' ', '')
-    for i in str1:
-        if i in str2:
-            s.add(i)
-    print(s)
-
-s1 = 'New York Times'
-s2 = 'monkeys vai ca chuong'
-common_chars(s1,s2)
+# def common_chars(str1, str2):
+#     s = set()
+#     str1 = str1.lower().replace(' ','')
+#     str2 = str2.lower().replace(' ', '')
+#     for i in str1:
+#         if i in str2:
+#             s.add(i)
+#     print(s)
+# 
+# s1 = 'New York Times'
+# s2 = 'monkeys vai ca chuong'
+# common_chars(s1,s2)
 
 # cách 2
 def common_chars(str1, str2):
@@ -201,4 +201,5 @@ def common_chars(str1, str2):
 
 s1 = 'New York Times'
 s2 = 'monkeys vai ca chuong'
+
 common_chars(s1, s2)
