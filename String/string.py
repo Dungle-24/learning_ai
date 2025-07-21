@@ -130,3 +130,44 @@ def remove_char (string, k):
     print(string[:k-1] + string[k:])
 
 remove_char(string,5)
+
+"""
+    Viết 1 hàm nhận tham số đầu vào là 1 chuỗi ký tự bất kỳ,
+    đếm và trả về số lượng nguyên âm trong chuỗi đó
+"""
+
+text = "A A A Today is a beautiful day"
+def count_vowels(string):
+    vowels = ['u', 'e', 'o', 'a', 'i']
+    count = 0
+    for i in string.lower():
+        if i in vowels:
+            count += 1
+    print(count)
+
+count_vowels(text)
+
+"""
+    Yêu cầu người dùng nhập vào 2 chuỗi ký tự bất kỳ.
+    Kiểm tra xem chúng có phải anagrams (phép đảo chữ)
+    của nhau không?
+    Định nghĩa anagram: 2 từ là anagram của nhau nếu ta có thể
+    thu được từ này bằng cách đổi vị trí các ký tự của từ kia
+    Các ví dụ:
+    "New York Times" và "monkeys write"
+    "coronavirus" và "carnivorous"
+    "a gentleman" = "elegant man"
+    "silent" = "listen"
+"""
+
+def are_anagrams(str1, str2):
+    c1 = str1.replace(' ','').lower()
+    c2 = str2.replace(' ','').lower()
+    if sorted(c1) == sorted(c2):
+        print(str1,'la anagrams cua', str2)
+    else:
+        print(str1,'khong la anagrams cua', str2)
+
+s1 = 'New York Times'
+s2 = 'monkeys write'
+are_anagrams(s1, s2)
