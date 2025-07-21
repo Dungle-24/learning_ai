@@ -70,3 +70,26 @@ set1 = {2, 4, 5, 6, 7}
 set2 = {"vàng", "red", "green", 2, 4}
 print(set1 ^ set2)
 print(set1.symmetric_difference(set2))
+
+# bài tập list thầy cho thêm
+"""
+    Viết hàm nhận 1 tham số đầu vào là 1 số tự nhiên n
+    In ra kết quả là tích các thừa số nguyên tố của số đó
+    Ví dụ, với n = 100
+    Kết quả in ra màn hình là:
+        100 = 2 x 2 x 5 x 5
+"""
+
+def get_string(n):
+    so_goc = n       
+    result = []         
+    if n != 1:
+        for i in range(2, n + 1):
+            while n % i == 0:
+                result.append(str(i)) 
+                n //= i
+        print(f"{so_goc} = {' x '.join(result)}")
+    else:
+        print("1 = 1")
+get_string(100)
+
