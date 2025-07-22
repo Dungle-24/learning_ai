@@ -1,12 +1,12 @@
 # loại ngoại lệ phổ biến
 # SyntaxError: lỗi cú pháp
 # IndexError: chỉ số ngoài phạm vi danh sách/tuple
-# AttributeError: truy cập thuộc tính không tồn tại
-# ImportError: import module không tồn tại
-# KeyError: truy cập key không tồn tại trong dictionary
-# NameError: truy cập biến không tồn tại
-# TypeError: thực hiện phép toán trên kiểu dữ liệu không phù hợp
-# FileNotFoundError: mở file không tồn tại
+# AttributeError: truy cập thuộc tính ko tồn tại
+# ImportError: import module ko tồn tại
+# KeyError: truy cập key ko tồn tại trong dictionary
+# NameError: truy cập biếnko tồn tại
+# TypeError: thực hiện phép toán trên kiểu dữ liệu ko phù hợp
+# FileNotFoundError: mở file ko tồn tại
 
 # cấu trúc try-except
 try:
@@ -24,16 +24,16 @@ except KeyError:
 except TypeError:
     print("Lỗi: Kiểu dữ liệu không phù hợp")
 
-# sử dụng else
+# dùng else
 try:
     x = 5
-    result = x / 2  # Không gây lỗi
+    result = x / 2 
 except ZeroDivisionError:
     print("Lỗi: Chia cho 0")
 else:
-    print(f"Kết quả: {result}")  # Chỉ chạy nếu không lỗi
+    print(f"Kết quả: {result}")  # Chỉ chạy nếu ko lỗi
 
-# sử dụng finally
+# dùng finally
 try:
     f = open("non_existent.txt", "r")
     content = f.read()
