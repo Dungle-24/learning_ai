@@ -1,13 +1,13 @@
 
 #loại ngoại lệ phổ biến
-#syntaxError: Lỗi cú pháp
+#syntaxError lỗi cú pháp
 # indexError: chỉ số ngoài phạm vi danh sách/tuple
-# attributeError: Truy cập thuộc tính không tồn tại
-# importError: Import module không tồn tại
-#keyError: Truy cập key không tồn tại trong dictionary
-# nameError: Truy cập biến không tồn tại
-#typeError: Thực hiện phép toán trên kiểu dữ liệu không phù hợp
-#fileNotFoundError: Mở file không tồn tại
+# attributeError: truy cập thuộc tính ko tồn tại
+# importError: import module ko tồn tại
+#keyError: truy cập key ko tồn tại trong dictionary
+# nameError: truy cập biến ko tồn tại
+#typeError: thực hiện phép toán trên kiểu dữ liệu ko phù hợp
+#fileNotFoundError: môở file ko tồn tại
 
 #cấu trúc try-except
 try:
